@@ -8,12 +8,12 @@ var bio = {
         "Mobile": ": 402-201-3965",
         "Email": ": haritha.rayakota@gmail.com",
         "Github": ": haritha0407",
-        "Location": ": Omaha",
+        "location": ": Omaha",
 
     },
 
     "skills": ["HTML", "CSS", "Javascript", "Jquery", "Bootstrap", "AngularJS", "JAVA", "Responsive Design"],
-    "bioPic": "images/profile_pic.jpg",
+    "biopic": "images/profile_pic.jpg",
     "welcomeMsg": "Seeking a Creative and challenging position"
 };
 bio.display = function() {
@@ -31,16 +31,16 @@ bio.display = function() {
 
     $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.Github));
 
-    $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.Location));
+    $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
     $('#header').append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMsg));
 
-    $("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
+    $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
 
     if (bio.skills.length > 0) {
         var len = bio.skills.length;
         // Append all the skills, and the skills title
         $('#header').append(HTMLskillsStart);
-        for (var i=0 ;i<bio.skills.length;i++) {
+        for (var i = 0; i < bio.skills.length; i++) {
             var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
             $("#skills").append(formattedSkill);
 
@@ -57,28 +57,28 @@ bio.display = function() {
     $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.Location));
 
 };
-bio.display();
+
 
 var education = {
     "schools": [{
         "name": "Oklahoma State University",
-        "city": ": Stillwater,OK,US",
+        "location": ": Stillwater,OK,US",
         "degree": "Masters",
-        "Major": "Electrical ",
+        "majors": ["Electrical "],
         "dates": "2010-2012",
         "url": "http://okstate.edu"
     }, {
         "name": "JNTUH",
-        "city": ": Hyderabad,India",
+        "location": ": Hyderabad,India",
         "degree": "BTECH",
-        "Major": "Electronics & Communication",
+        "majors": ["Electronics & Communication"],
         "dates": "2006-2010",
         "url": "http://www.jntuh.ac.in"
     }],
     "onlineCourses": [{
         "title": "Front-End Web developer Nanodegree",
         "school": "Udacity",
-        "dates": "Sept 2016-",
+        "dates": "Sept 2016-Jan 2017",
         "url": "http://www.udacity.com"
     }]
 };
@@ -90,8 +90,8 @@ education.display = function() {
             var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#", education.schools[i].url);
             var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
             var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
-            var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].city);
-            var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].Major);
+            var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
+            var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
 
 
             $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree);
@@ -103,7 +103,7 @@ education.display = function() {
 
         if (education.onlineCourses.length > 0) {
             $("#education").append(HTMLonlineClasses);
-            for(var j=0;j<education.onlineCourses.length;j++) {
+            for (var j = 0; j < education.onlineCourses.length; j++) {
                 $("#education").append(HTMLschoolStart);
                 var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[j].title).replace("#", education.onlineCourses[j].url);
                 var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[j].school);
@@ -120,7 +120,7 @@ education.display = function() {
 };
 
 
-education.display();
+
 
 var work = {
     "jobs": [{
@@ -140,7 +140,7 @@ var work = {
     ]
 };
 work.display = function() {
-    for (var job=0; job<work.jobs.length;job++)  {
+    for (var job = 0; job < work.jobs.length; job++) {
         $('#workExperience').append(HTMLworkStart);
 
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -160,14 +160,14 @@ work.display = function() {
     }
 };
 
-work.display();
+
 
 var projects = {
     "projects": [{
         "title": "Online Portfolio",
-        "datesWorked": "Oct 2016",
+        "dates": "Oct 2016",
         "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers. ",
-        "image": "images/portfolio.png"
+        "images": ["images/portfolio.png"]
     }]
 };
 projects.display = function() {
@@ -177,18 +177,26 @@ projects.display = function() {
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
         $(".project-entry:last").append(formattedTitle);
 
-        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[i].datesWorked);
+        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
         $(".project-entry:last").append(formattedDates);
 
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
         $(".project-entry:last").append(formattedDescription);
-        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[i].image);
-        $(".project-entry:last").append(formattedImage);
+        if (projects.projects[i].images.length > 0) {
+            var len = projects.projects[i].images.length;
+            for (var j = 0; j < len; j++) {
+                var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[j]);
+                $(".project-entry:last").append(formattedImage);
+
+            }
+        }
 
         //}
     }
 };
-
+bio.display();
+education.display();
+work.display();
 projects.display();
 
 $("#mapDiv").append(googleMap);
