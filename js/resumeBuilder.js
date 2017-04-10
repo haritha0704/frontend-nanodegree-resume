@@ -7,7 +7,7 @@ var bio = {
     "contacts": {
         "mobile": ": 402-201-3965",
         "email": ": haritha.rayakota@gmail.com",
-        "github": ": haritha0407",
+        "github": ": haritha0704",
         "location": ": Omaha",
 
     },
