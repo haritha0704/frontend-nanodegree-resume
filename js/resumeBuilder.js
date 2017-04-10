@@ -5,16 +5,16 @@ var bio = {
     "name": "Haritha Rayakota",
     "role": "Front end Developer",
     "contacts": {
-        "Mobile": ": 402-201-3965",
-        "Email": ": haritha.rayakota@gmail.com",
-        "Github": ": haritha0407",
+        "mobile": ": 402-201-3965",
+        "email": ": haritha.rayakota@gmail.com",
+        "github": ": haritha0407",
         "location": ": Omaha",
 
     },
 
     "skills": ["HTML", "CSS", "Javascript", "Jquery", "Bootstrap", "AngularJS", "JAVA", "Responsive Design"],
     "biopic": "images/profile_pic.jpg",
-    "welcomeMsg": "Seeking a Creative and challenging position"
+    "welcomeMessage": "Seeking a Creative and challenging position"
 };
 bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -25,14 +25,14 @@ bio.display = function() {
     $("#header").prepend(formattedNameRole);
 
 
-    $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.Mobile));
+    $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
 
-    $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.Email));
+    $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
 
-    $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.Github));
+    $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
 
     $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
-    $('#header').append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMsg));
+    $('#header').append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage));
 
     $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
 
