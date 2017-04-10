@@ -48,13 +48,13 @@ bio.display = function() {
     }
 
 
-    $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.Mobile));
+    $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
 
-    $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.Email));
+    $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
 
-    $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.Github));
+    $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
 
-    $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.Location));
+    $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 
 };
 
