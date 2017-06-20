@@ -161,6 +161,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width:380px;
+    height:225px;
 }
 span {
     padding: 5px;

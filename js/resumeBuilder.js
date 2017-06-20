@@ -165,16 +165,47 @@ work.display = function() {
 var projects = {
     "projects": [{
         "title": "Online Portfolio",
-        "dates": "Oct 2016",
+        "url":"https://haritha0704.github.io/portfolio/index.html",
+        "dates": "Jan 2017",
+
         "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers. ",
         "images": ["images/portfolio.png"]
-    }]
+    },
+    {
+        "title":"Arcade Game",
+         "url":"https://github.com/haritha0704/frontend-nanodegree-arcade-game",
+        "dates":"Apr 2017",
+        "description":"This web page was the third project for Udacity's Front-End Nanodegree. The project was built on Google App Engine, and the project was focused on using JavaScript and Canvas to make a classic arcade game on web page.",
+        "images":["images/arcade-game_small.jpg"]
+    },
+    {
+        "title":"Website Optimization",
+        "url":"https://github.com/haritha0704/frontend-nanodegree-mobile-portfolio",
+        "dates":"Mar 2017" ,
+         "description":"The purpose of this project is to take a site that loads very poorly and optimize it to over 60 frames per second.",
+         "images": ["images/website-optimization_pizza_small.jpg"]  
+    },
+    {  "title":"NeighbourHood Map",
+         "url":"https://github.com/haritha0704/neighbourhood-map",
+        "dates":"May 2017",
+         "description":"A single-page application using Google Maps API, Instagram API, knockout.js, and MVVM patterns. Explore restaurantsin Omaha,NE. Restaurants are filterable. Selecting a restaurant from the list will display pertinent information and the latest Instagram ratings.",
+         "images":["images/neighborhood-map_small.jpg"]
+          },
+         {
+              "title":"FeedReader Testing",
+        "url":"https://github.com/haritha0704/frontend-nanodegree-feedreader",
+        "dates":"Feb 2017",
+         "description":"The main goal of this project is to write a test script based on Jasmine for a feedreader.This goal was achieved by writing the following tests. We loved with a love that was more than love.",
+         "images": ["images/feedreader-testing_small.jpg"]
+         }
+    ]
 };
 projects.display = function() {
     for (var i = 0; i < projects.projects.length; i++) {
         $("#projects").append(HTMLprojectStart);
 
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+         formattedTitle = formattedTitle.replace("%url%", projects.projects[i].url);
         $(".project-entry:last").append(formattedTitle);
 
         var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
