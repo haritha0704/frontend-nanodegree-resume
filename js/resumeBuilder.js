@@ -13,7 +13,7 @@ var bio = {
     },
 
     "skills": ["HTML", "CSS", "Javascript", "Jquery", "Bootstrap", "AngularJS", "JAVA", "Responsive Design"],
-    "biopic": "images/profile_pic.jpg",
+    "biopic": "images/profile_pic.JPG",
     "welcomeMessage": "Seeking a Creative and challenging position"
 };
 bio.display = function() {
