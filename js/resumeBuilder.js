@@ -78,7 +78,7 @@ var education = {
     "onlineCourses": [{
         "title": "Front-End Web developer Nanodegree",
         "school": "Udacity",
-        "dates": "Sept 2016-Jan 2017",
+        "dates": "Jan 2017-Jun 2017",
         "url": "http://www.udacity.com"
     }]
 };
@@ -169,7 +169,7 @@ var projects = {
         "dates": "Jan 2017",
 
         "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers. ",
-        "images": ["images/portfolio.png"]
+        "images": ["images/portfolio.jpg"]
     },
     {
         "title":"Arcade Game",
