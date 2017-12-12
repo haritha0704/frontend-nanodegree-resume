@@ -5,7 +5,7 @@ var bio = {
     "name": "Haritha Rayakota",
     "role": "Front end Developer",
     "contacts": {
-        "mobile": ": 402-201-3965",
+        "mobile": ": 402-507-9464",
         "email": ": haritha.rayakota@gmail.com",
         "github": ": haritha0704",
         "location": ": Omaha",
