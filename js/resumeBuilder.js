@@ -124,16 +124,15 @@ education.display = function() {
 
 var work = {
     "jobs": [{
-            "employer": "Fraunhofer CSE",
-            "title": "Technical Intern",
-            "location": "Boston,MA",
-            "dates": "Sept 2012-Mar 2013",
-            "description": "Designing a thermostat which provides an energy efficient system with the help of a zigbee based wireless sensor network and Android application for remote monitoring."
-        }, {
+            
+            
+     
+          
+          
             "employer": "Ecloud Labs",
             "title": "Software Developer",
             "location": "Iselin,NJ",
-            "dates": "Apr 2013-Oct 2014",
+            "dates": "Sept 2012-Sept 2014",
             "description": "Designed webpages using HTML, CSS and JavaScript as a part of an agile team for various clients.Troubleshooted production issues, fix the bugs for sustaining the application."
         }
 
