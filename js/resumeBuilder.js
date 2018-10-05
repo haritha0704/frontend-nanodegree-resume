@@ -124,15 +124,22 @@ education.display = function() {
 
 var work = {
     "jobs": [{
-            
-            
+        "employer": "Fraunhofer CSE",
+            "title": "Graduate Technical Intern",
+            "location": "Boston,MA",
+            "dates": "Sept 2012-Apr 2013"
+        "employer": "BI Labs",
+            "title": "Technical Intern",
+            "location": "Iselin,NJ",
+            "dates": "Apr 2013-Sept 2013"
+                
      
           
           
             "employer": "Ecloud Labs",
             "title": "Software Developer",
             "location": "Iselin,NJ",
-            "dates": "Sept 2012-Sept 2014",
+            "dates": "Sept 2013-Sept 2014",
             "description": "Designed webpages using HTML, CSS and JavaScript as a part of an agile team for various clients.Troubleshooted production issues, fix the bugs for sustaining the application."
         }
 
