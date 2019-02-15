@@ -119,36 +119,31 @@ education.display = function() {
     }
 };
 
-
-
-
 var work = {
     "jobs": [{
-        "employer": "Fraunhofer CSE",
+            "employer": "Fraunhofer CSE",
             "title": "Graduate Technical Intern",
             "location": "Boston,MA",
-            "dates": "Sept 2012-Apr 2013"
-    },
-             {
-            "employer": "BI Labs",
+            "dates": "Sept 2012-Apr 2013",
+            "description": "Designing a thermostat which provides an energy efficient system with the help of a zigbee based wireless sensor network and Android application for remote monitoring."
+        },
+            {"employer": "BI Labs",
             "title": "Technical Intern",
             "location": "Iselin,NJ",
-            "dates": "Apr 2013-Sept 2013"
-             },
-                
-     
-          
-          
-             {"employer": "Ecloud Labs",
+            "dates": "Apr 2013-Sept 2013",
+            "description":"Remote monitoring surveillance system for managing video services through mobile phones using android application"
+            },
+                 
+            {"employer": "Ecloud Labs",
             "title": "Software Developer",
             "location": "Iselin,NJ",
             "dates": "Sept 2013-Sept 2014",
             "description": "Designed webpages using HTML, CSS and JavaScript as a part of an agile team for various clients.Troubleshooted production issues, fix the bugs for sustaining the application."
         }
-             
 
     ]
 };
+
 work.display = function() {
     for (var job = 0; job < work.jobs.length; job++) {
         $('#workExperience').append(HTMLworkStart);
